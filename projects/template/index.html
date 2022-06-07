@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sketch</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="../../libraries/p5.min.js"></script>
+    <script src="../../libraries/p5.sound.min.js"></script>
+
+    <script src="../../ccapture.js/src/CCapture.js"></script>
+    <script src="../../ccapture.js/src/download.js"></script>
+    <script src="../../ccapture.js/src/gif.js"></script>
+    <script src="../../ccapture.js/src/tar.js"></script>
+    <script src="../../ccapture.js/src/webm-writer-0.2.0.js"></script>
+
+    <script>
+      var capturer = new CCapture( {
+      framerate: 60,
+      verbose: false,
+      format: 'gif',
+      workersPath: '../../ccapture.js/src/'
+    } );
+    </script>
+  </head>
+
+  <body>
+    <script type = "module" src="../../utils/grid.js"></script>
+    <script type = "module" src="../../../utils/circle_packing.js"></script>
+    <script type = "module" src="sketch.js"></script>
+  </body>
+</html>
+

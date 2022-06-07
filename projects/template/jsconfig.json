@@ -1,0 +1,8 @@
+{
+  "include": [
+    "*.js",
+    "../../libraries/*.js",
+    "../../ccapture/*.js",
+    "/home/huonglarne/.vscode-server/extensions/samplavigne.p5-vscode-1.2.8/p5types/global.d.ts",
+    "../../utils/*.js"]
+}
