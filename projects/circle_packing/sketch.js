@@ -1,5 +1,5 @@
-import * as circle_packing from '../utils/circle_packing.js'
-import * as utils from '../utils/utils.js'
+import * as circle_packing from '../../utils/circle_packing.js'
+import * as utils from '../../utils/utils.js'
 
 var height = 400
 var width = 400
