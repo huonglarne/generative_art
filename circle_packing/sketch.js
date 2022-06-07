@@ -1,14 +1,12 @@
-import * as circle_packing from './utils/circle_packing.js'
-import * as utils from './utils/utils.js'
-
-var pg
+import * as circle_packing from '../utils/circle_packing.js'
+import * as utils from '../utils/utils.js'
 
 var height = 400
 var width = 400
 
 var max_r = 15
-var min_r = 3
-var min_dist = 1
+var min_r = 4
+var min_dist = -2
 
 var circle_pack
 
@@ -23,9 +21,10 @@ function setup(){
 
 function draw(){
   circle_pack.draw()
-
-  utils.save_canvas()
 }
+
+draw = utils.record_gif(draw, 60)
+draw = utils.capture_canvas(draw, 'output.png')
 
 window.setup = setup
 window.draw = draw
