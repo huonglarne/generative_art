@@ -28,10 +28,8 @@ export class Cell{
         pop()
     }
 
-    draw(){
+    show(){
         this.move_to('corner')
-        stroke(255, 255, 255)
-        noFill()
         rect(0, 0, this.width, this.height)
         this.move_out()
     }
@@ -58,5 +56,20 @@ export class Grid{
             }
             this.cells.push(col_list)
         }
+    }
+
+    *cells_generator(){
+        for (var row=0; row<this.n_rows; row+=1){
+            for (var col=0; col<this.n_cols; col+=1){
+                var this_cell = this.cells[row][col]
+                yield this_cell
+            }
+        }
+    }
+
+    show(){
+        for (var this_cell of this.cells_generator()){
+            this_cell.show()
+          }
     }
 }
